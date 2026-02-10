@@ -8,8 +8,15 @@
 			
 			<div class="h-full flex items-center md:flex-row-reverse pl-16 pr-12 md:pl-32 pt-64 md:pt-24">
 				
-				<div class="text-white px-3 md:px-6 py-5 md:py-10 relative max-w-xl">
-					
+				<div
+					class="text-white px-3 md:px-6 py-5 md:py-10 relative max-w-xl"
+					x-data="{ show: false }"
+					x-init="$nextTick(() => show = true)"
+					x-show="show"
+					x-transition:enter="transition ease-out duration-1000"
+					x-transition:enter-start="opacity-0 translate-y-16"
+					x-transition:enter-end="opacity-100 translate-y-0"
+				>
 					<div class="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-orange-400"></div>
 					<div class="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-orange-400"></div>
 					<div class="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-orange-400"></div>
@@ -18,7 +25,7 @@
 					<h1 class="-ml-2 mb-6 font-heading tracking-tightest leading-18 md:leading-24 uppercase relative font-bold text-7xl md:text-9xl text-white">Farard<br>Darver</h1>
 					<p class="text-2xl md:text-3xl text-orange-400 mb-6">From Commando to CEO</p>
 					<div class="md:text-lg">
-						<p class="mb-4">Former British Army Officer turned entrepreneur, building award-winning health brands trusted by elite athletes and military personnel.</p>
+						<p class="mb-4 text-pretty md:pr-20">Former British Army Officer turned entrepreneur, building <span class="text-nowrap">award-winning</span> health brands trusted by elite athletes and military personnel.</p>
 						{# <a href="#" class="tracking-tight font-heading uppercase inline-block px-4 py-1.5 bg-orange-400 text-black border-black border-2 ring-2 ring-orange-400 transition hover:ring-white hover:bg-white">Find out more</a> #}
 					</div>
 				</div>

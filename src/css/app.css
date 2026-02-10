@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@source "../templates/**/*.twig";
 
 /* Prevent flash of unstyled content for Alpine.js */
 [x-cloak] {
