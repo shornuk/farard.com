@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+/* Prevent flash of unstyled content for Alpine.js */
+[x-cloak] {
+  display: none !important;
+}
+
+@theme {
+  --font-display: "Fjalla", sans-serif; 
+  --font-heading: "Quantico", sans-serif;
+  --tracking-tightest: -0.075em; 
+}

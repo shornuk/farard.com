@@ -1,0 +1,23 @@
+{
+  "name": "html-templates-starter",
+  "version": "1.0.0",
+  "description": "Lightweight HTML templates starter with Tailwind CSS and Alpine.js",
+  "scripts": {
+    "build:html": "node scripts/build-twig.cjs",
+    "build:css": "npx @tailwindcss/cli -i src/css/app.css -o dist/app.css",
+    "build:js": "copyfiles -f \"src/js/**/*\" dist",
+    "build:fonts": "copyfiles -u 1 \"src/fonts/**/*\" dist",
+    "build": "npm run build:html && npm run build:css && npm run build:js && npm run build:fonts",
+    "watch:html": "node scripts/build-twig-watch.cjs",
+    "watch:css": "npx @tailwindcss/cli -i src/css/app.css -o dist/app.css --watch",
+    "dev": "npm run build && concurrently \"npm run watch:html\" \"npm run watch:css\" \"live-server dist\""
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4",
+    "concurrently": "^8.2.2",
+    "copyfiles": "^2.4.1",
+    "live-server": "^1.2.0",
+    "tailwindcss": "^4",
+    "twig": "^1.17.1"
+  }
+}
