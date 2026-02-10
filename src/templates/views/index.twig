@@ -3,7 +3,6 @@
 {% block main %}
 	<main class="flex-1 bg-black relative mb-8">
 		
-		{# <section class="h-screen max-w-6xl mx-auto bg-no-repeat bg-position-[right_2rem] bg-contain" > #}
 		<section class="h-screen max-w-6xl mx-auto bg-no-repeat bg-position-[top_right_2rem] md:bg-position-[bottom_left_2rem] bg-contain" style="background-image: url(./images/farard.png)">
 			
 			<div class="h-full flex items-center md:flex-row-reverse pl-16 pr-12 md:pl-32 pt-64 md:pt-24">
@@ -15,85 +14,92 @@
 					x-show="show"
 					x-transition:enter="transition ease-out duration-1000"
 					x-transition:enter-start="opacity-0 translate-y-16"
-					x-transition:enter-end="opacity-100 translate-y-0"
-				>
-					<div class="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-orange-400"></div>
-					<div class="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-orange-400"></div>
-					<div class="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-orange-400"></div>
-					<div class="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-orange-400"></div>
+					x-transition:enter-end="opacity-100 translate-y-0">
+					
+					<div class="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-orange-400/50"></div>
+					<div class="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-orange-400/50"></div>
+					<div class="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-orange-400/50"></div>
+					<div class="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-orange-400/50"></div>
 
 					<h1 class="-ml-2 mb-6 font-heading tracking-tightest leading-18 md:leading-24 uppercase relative font-bold text-7xl md:text-9xl text-white">Farard<br>Darver</h1>
 					<p class="text-2xl md:text-3xl text-orange-400 mb-6">From Commando to CEO</p>
-					<div class="md:text-lg">
-						<p class="mb-4 text-pretty md:pr-20">Former British Army Officer turned entrepreneur, building <span class="text-nowrap">award-winning</span> health brands trusted by elite athletes and military personnel.</p>
-						{# <a href="#" class="tracking-tight font-heading uppercase inline-block px-4 py-1.5 bg-orange-400 text-black border-black border-2 ring-2 ring-orange-400 transition hover:ring-white hover:bg-white">Find out more</a> #}
-					</div>
+					<p class="md:text-lg mb-4 text-pretty md:pr-20">Former British Army Officer turned entrepreneur, building <span class="text-nowrap">award-winning</span> health brands trusted by elite athletes and military personnel.</p>
+					{# <a href="#about" class="mr-4 tracking-tight font-heading uppercase inline-block px-4 py-1 bg-white text-black border-black border-2 ring-2 ring-white transition hover:bg-orange-400">
+						<span>Find out more ↓</span>
+					</a>
+					 #}
+					 <a href="#" class="tracking-tight font-heading uppercase inline-block px-4 py-1 bg-orange-400 text-black border-black border-2 ring-2 ring-orange-400 transition hover:ring-orange-400 hover:bg-white">
+						<span>Book me</span>
+					</a>
 				</div>
 
 			</div>
 
 		</section>
 		
-		<section class="md:h-screen bg-slate-900 flex flex-col md:flex-row flex-col-reverse">
+		<section id="about" class="md:h-screen bg-black border-t border-orange-400/20 pl-16 md:pl-32 pr-8 py-16 md:py-auto">
 			
-			<div class="h-full flex items-center justify-center pl-16 pr-12 md:pl-32 w-full py-8 md:py-auto">
-				<div class="text-white px-3 md:px-6 py-5 md:py-10 relative max-w-xl">
-					
-					<div class="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-orange-400"></div>
-					<div class="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-orange-400"></div>
-					<div class="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-orange-400"></div>
-					<div class="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-orange-400"></div>
+			<div class="max-w-6xl mx-auto h-full flex flex-col md:flex-row gap-6 items-center justify-center w-full">
+				
+				<div class="text-white px-3 md:px-6 py-5 md:py-10 relative max-w-xl">	
+					{# corners #}
+					<div class="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-orange-400/50"></div>
+					<div class="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-orange-400/50"></div>
+					<div class="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-orange-400/50"></div>
+					<div class="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-orange-400/50"></div>
 
 					<h2 class="md:-ml-2 mb-6 font-heading tracking-tightest leading-12 md:leading-14 uppercase relative font-bold text-4xl md:text-6xl text-white">About Farard</h2>
 					<p class="text-lg md:text-2xl text-orange-400 mb-6">Built from experience. Driven by purpose</p>
-					<div class="md:text-lg">
-						<p class="mb-4">Farard served over 16 years in the British Army, deploying on operations and elite training missions worldwide. Identified for fast-track promotion to Colonel, he chose instead to pursue a path focused on how we recover, perform and sustain peak capability without long-term cost.</p>
-						<p>Personal experience with repeated injury — culminating in a total hip replacement — highlighted a reliance on pharmaceutical pain management in high-performance environments. This sparked a relentless search for better, natural solutions.</p>
-					</div>
+					<p class="md:text-lg mb-4">Farard served over 16 years in the British Army, deploying on operations and elite training missions worldwide. Identified for fast-track promotion to Colonel, he chose instead to pursue a path focused on how we recover, perform and sustain peak capability without long-term cost.</p>
+					<p class="md:text-lg">Personal experience with repeated injury — culminating in a total hip replacement — highlighted a reliance on pharmaceutical pain management in high-performance environments. This sparked a relentless search for better, natural solutions.</p>
+				</div>
+
+				{# army image #}
+				<div class="w-full md:w-96">
+					<img class="aspect-video md:aspect-auto object-cover object-top" src="./images/farard-army.jpg" alt="Farard Darver in uniform serving in the British Armed Forces">
 				</div>
 			</div>
-			<div class="w-full md:h-full md:w-1/2 md:pt-32">
-				<img class="aspect-square md:aspect-auto object-cover object-top" src="./images/farard-army.jpg" alt="">
-			</div>
+			
 		</section>
 
-		<section class="md:h-screen bg-black flex flex-col md:flex-row flex-col-reverse">
-			<div class="h-full flex items-center justify-center pl-16 pr-12 md:pl-32 w-full py-8 md:py-auto flex-col md:flex-row md:flex-row-reverse">
+		<section id="founder" class="md:h-screen bg-black border-t border-orange-400/20 pl-16 md:pl-32 pr-8 py-16 md:py-auto">
+			<div class="max-w-6xl mx-auto h-full flex flex-col md:flex-row-reverse gap-6 items-center justify-center w-full">
+				
 				<div class="text-white px-3 md:px-6 py-5 md:py-10 relative max-w-xl">
-					<div class="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-orange-400"></div>
-					<div class="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-orange-400"></div>
-					<div class="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-orange-400"></div>
-					<div class="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-orange-400"></div>
+					{# corners #}
+					<div class="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-orange-400/50"></div>
+					<div class="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-orange-400/50"></div>
+					<div class="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-orange-400/50"></div>
+					<div class="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-orange-400/50"></div>
 
 					<h2 class="md:-ml-2 mb-6 font-heading tracking-tightest leading-12 md:leading-14 uppercase relative font-bold text-5xl md:text-6xl text-white">Founder & CEO — Current Mission</h2>
 					<p class="text-xl md:text-2xl text-orange-400 mb-6">A leader in performance, recovery & responsible innovation</p>
-					<div class="md:text-lg">
-						<p class="mb-4">Today, Farard leads <a class="underline" href="#">Healthcare International Research</a> with a vision rooted in longevity, trust and repeat performance — whether in sport, defence, corporate leadership or everyday life. His leadership philosophy brings military-grade rigour to wellness innovation, emphasising evidence, compliance and real-world impact.</p>
-					</div>
+					<p class="md:text-lg mb-4">Today, Farard leads <a class="underline" href="#">Healthcare International Research</a> with a vision rooted in longevity, trust and repeat performance — whether in sport, defence, corporate leadership or everyday life. His leadership philosophy brings military-grade rigour to wellness innovation, emphasising evidence, compliance and real-world impact.</p>
 				</div>
-				<div class="w-full md:h-full md:w-1/2 md:pr-12 pt-16 md:mb-16">
-					<img src="./images/farard-hir.jpg" alt="">
+				
+				<div class="w-full md:w-96">
+					<img src="./images/farard-hir.jpg" alt="Headshot of Farard Darver, CEO or Healthcare International Research">
 				</div>
 			</div>
 		</section>
 
-		<section class="md:min-h-screen py-12 bg-slate-900 flex flex-col md:flex-row flex-col-reverse">
-			<div class="h-full flex items-center justify-center pl-16 pr-12 md:pl-32 w-full py-8 md:py-auto">
+		<section id="brands" class="md:min-h-screen bg-black border-t border-orange-400/20 pl-16 md:pl-32 pr-8 py-16 md:py-auto">
+			<div class="h-full flex items-center justify-center">
 				<div class="text-white px-3 md:px-6 py-5 md:py-10 relative max-w-xl">
 					
-					<div class="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-orange-400"></div>
-					<div class="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-orange-400"></div>
-					<div class="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-orange-400"></div>
-					<div class="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-orange-400"></div>
+					<div class="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-orange-400/50"></div>
+					<div class="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-orange-400/50"></div>
+					<div class="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-orange-400/50"></div>
+					<div class="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-orange-400/50"></div>
 
 					<h2 class="md:-ml-2 mb-6 font-heading tracking-tightest leading-12 md:leading-14 uppercase relative font-bold text-5xl md:text-6xl text-white">The Brands</h2>
 					<p class="text-xl md:text-2xl text-orange-400 mb-6">Award-winning brands changing how people recover</p>
 					<div>
-						<p class="mb-4">At the heart of Farard’s work are two global brands that have redefined natural recovery and skincare solutions: HEMPE and MotherSage. These products are backed by strategic investors and sporting ambassadors and distriubuted internationally.</p>
+						<p class="mb-4">At the heart of Farard’s work are two global brands that have redefined natural recovery and skincare solutions: HEMPE and MotherSage. These products are backed by strategic investors as well as sporting ambassadors and distriubuted internationally.</p>
 						<h3 class="uppercase font-heading tracking-tight text-orange-400 text-xl mb-2">Hempe</h3>
 						<ul class="mb-6 list-disc pl-4">
 							<li><p>Topical CBD gels and relief products focused on muscle and joint recovery</p></li>
-							<li><p>First CBD gel to achieve NSF Certified for Sport status — approved for elite athletes and professional environments</p></li>
+							<li><p>First CBD gel to achieve NSF Certified for Sport® status — approved for elite athletes and professional environments</p></li>
 							<li><p>Multiple industry awards for wellness and pain relief products</p></li>
 						</ul>
 						<a href="#" class="text-sm mb-6 tracking-tight font-heading uppercase inline-block px-4 py-1 bg-white text-black border-black border-2 ring-2 ring-white transition hover:ring-white hover:bg-white">
@@ -107,6 +113,7 @@
 						<ul class="mb-6 list-disc pl-4">
 							<li><p>Natural CBD-based skincare range with beauty and wellness accolades</p></li>
 							<li><p>Recognised for skincare innovation and sustainable formulation</p></li>
+							<li><p>Winner of numerous global awards in beauty and skincare</p></li>
 						</ul>
 						<a href="#" class="text-sm mb-6 tracking-tight font-heading uppercase inline-block px-4 py-1 bg-white text-black border-black border-2 ring-2 ring-white transition hover:ring-white hover:bg-white">
 							<span>Visit mothersage.com</span>
@@ -120,24 +127,20 @@
 			</div>
 		</section>
 
-		<section class="md:min-h-screen py-12 bg-black flex flex-col md:flex-row flex-col-reverse">
-			<div class="h-full flex items-center justify-center pl-16 pr-12 md:pl-32 w-full py-8 md:py-auto flex-col md:flex-row">
+		<section id="contact" class="md:h-screen bg-black border-t border-orange-400/20 pl-16 md:pl-32 pr-8 py-8 md:py-auto">
+			
+			<div class="w-full h-full flex items-center justify-center flex-col md:flex-row gap-6">
+				
 				<div class="text-white px-3 md:px-6 py-5 md:py-10 relative max-w-xl">
-					
-					{# <div class="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-orange-400"></div>
-					<div class="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-orange-400"></div>
-					<div class="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-orange-400"></div>
-					<div class="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-orange-400"></div> #}
-
 					<h2 class="md:-ml-2 mb-6 font-heading tracking-tightest leading-12 md:leading-14 uppercase relative font-bold text-5xl md:text-6xl text-white">Connect with Farard</h2>
 					<p class="text-xl md:text-2xl text-orange-400 mb-6">How to get in touch</p>
-					<div>
-						<p class="mb-4">Whether you’re interested in leadership speaking, innovation, collaboration or wellness insights, Farard is open to connecting.</p>
-					</div>
+					<p class="mb-4 text-pretty">Whether you’re interested in leadership speaking, innovation collaboration or high performance insights, Farard is open to connecting.</p>
 				</div>
+				
 				<div class="text-white transition flex flex-col space-y-3">
+					
 					{# Facebook #}
-					<a href="#" class="inline-flex items-center space-x-3 text-lg transition hover:text-white">
+					<a href="#" class="inline-flex items-center space-x-3 text-lg transition hover:text-orange-400">
 						<svg class="size-5 md:size-6 fill-orange-400" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<g clip-path="url(#clip0_17_61)">
 								<path d="M24 0C10.7453 0 0 10.7453 0 24C0 35.255 7.74912 44.6995 18.2026 47.2934V31.3344H13.2538V24H18.2026V20.8397C18.2026 12.671 21.8995 8.8848 29.9194 8.8848C31.44 8.8848 34.0637 9.18336 35.137 9.48096V16.129C34.5706 16.0694 33.5866 16.0397 32.3645 16.0397C28.4294 16.0397 26.9088 17.5306 26.9088 21.4061V24H34.7482L33.4013 31.3344H26.9088V47.8243C38.7926 46.3891 48.001 36.2707 48.001 24C48 10.7453 37.2547 0 24 0Z" fill="currentColor"/>
@@ -146,9 +149,8 @@
 						<span>Facebook</span>
 					</a>
 					
-
 					{# Instagram #}
-					<a href="#" class="inline-flex items-center space-x-3 text-lg transition hover:text-white">
+					<a href="#" class="inline-flex items-center space-x-3 text-lg transition hover:text-orange-400">
 						<svg class="size-5 md:size-6 fill-orange-400" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<g clip-path="url(#clip0_17_27)">
 							<path d="M24 4.32187C30.4125 4.32187 31.1719 4.35 33.6938 4.4625C36.0375 4.56562 37.3031 4.95938 38.1469 5.2875C39.2625 5.71875 40.0688 6.24375 40.9031 7.07812C41.7469 7.92188 42.2625 8.71875 42.6938 9.83438C43.0219 10.6781 43.4156 11.9531 43.5188 14.2875C43.6313 16.8187 43.6594 17.5781 43.6594 23.9813C43.6594 30.3938 43.6313 31.1531 43.5188 33.675C43.4156 36.0188 43.0219 37.2844 42.6938 38.1281C42.2625 39.2438 41.7375 40.05 40.9031 40.8844C40.0594 41.7281 39.2625 42.2438 38.1469 42.675C37.3031 43.0031 36.0281 43.3969 33.6938 43.5C31.1625 43.6125 30.4031 43.6406 24 43.6406C17.5875 43.6406 16.8281 43.6125 14.3063 43.5C11.9625 43.3969 10.6969 43.0031 9.85313 42.675C8.7375 42.2438 7.93125 41.7188 7.09688 40.8844C6.25313 40.0406 5.7375 39.2438 5.30625 38.1281C4.97813 37.2844 4.58438 36.0094 4.48125 33.675C4.36875 31.1438 4.34063 30.3844 4.34063 23.9813C4.34063 17.5688 4.36875 16.8094 4.48125 14.2875C4.58438 11.9437 4.97813 10.6781 5.30625 9.83438C5.7375 8.71875 6.2625 7.9125 7.09688 7.07812C7.94063 6.23438 8.7375 5.71875 9.85313 5.2875C10.6969 4.95938 11.9719 4.56562 14.3063 4.4625C16.8281 4.35 17.5875 4.32187 24 4.32187ZM24 0C17.4844 0 16.6688 0.028125 14.1094 0.140625C11.5594 0.253125 9.80625 0.665625 8.2875 1.25625C6.70312 1.875 5.3625 2.69062 4.03125 4.03125C2.69063 5.3625 1.875 6.70313 1.25625 8.27813C0.665625 9.80625 0.253125 11.55 0.140625 14.1C0.028125 16.6687 0 17.4844 0 24C0 30.5156 0.028125 31.3312 0.140625 33.8906C0.253125 36.4406 0.665625 38.1938 1.25625 39.7125C1.875 41.2969 2.69063 42.6375 4.03125 43.9688C5.3625 45.3 6.70313 46.125 8.27813 46.7344C9.80625 47.325 11.55 47.7375 14.1 47.85C16.6594 47.9625 17.475 47.9906 23.9906 47.9906C30.5063 47.9906 31.3219 47.9625 33.8813 47.85C36.4313 47.7375 38.1844 47.325 39.7031 46.7344C41.2781 46.125 42.6188 45.3 43.95 43.9688C45.2812 42.6375 46.1063 41.2969 46.7156 39.7219C47.3063 38.1938 47.7188 36.45 47.8313 33.9C47.9438 31.3406 47.9719 30.525 47.9719 24.0094C47.9719 17.4938 47.9438 16.6781 47.8313 14.1188C47.7188 11.5688 47.3063 9.81563 46.7156 8.29688C46.125 6.70312 45.3094 5.3625 43.9688 4.03125C42.6375 2.7 41.2969 1.875 39.7219 1.26562C38.1938 0.675 36.45 0.2625 33.9 0.15C31.3313 0.028125 30.5156 0 24 0Z" fill="currentColor"/>
@@ -160,7 +162,7 @@
 					</a>
 
 					{# Linked In #}
-					<a href="#" class="inline-flex items-center space-x-3 text-lg transition hover:text-white">
+					<a href="#" class="inline-flex items-center space-x-3 text-lg transition hover:text-orange-400">
 						<svg class="size-5 md:size-6 fill-orange-400" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<g clip-path="url(#clip0_17_68)">
 							<path d="M44.4469 0H3.54375C1.58437 0 0 1.54688 0 3.45938V44.5312C0 46.4437 1.58437 48 3.54375 48H44.4469C46.4062 48 48 46.4438 48 44.5406V3.45938C48 1.54688 46.4062 0 44.4469 0ZM14.2406 40.9031H7.11563V17.9906H14.2406V40.9031ZM10.6781 14.8688C8.39062 14.8688 6.54375 13.0219 6.54375 10.7437C6.54375 8.46562 8.39062 6.61875 10.6781 6.61875C12.9563 6.61875 14.8031 8.46562 14.8031 10.7437C14.8031 13.0125 12.9563 14.8688 10.6781 14.8688ZM40.9031 40.9031H33.7875V29.7656C33.7875 27.1125 33.7406 23.6906 30.0844 23.6906C26.3812 23.6906 25.8187 26.5875 25.8187 29.5781V40.9031H18.7125V17.9906H25.5375V21.1219H25.6312C26.5781 19.3219 28.9031 17.4188 32.3625 17.4188C39.5719 17.4188 40.9031 22.1625 40.9031 28.3313V40.9031Z" fill="currentColor"/>
@@ -170,7 +172,7 @@
 					</a>
 
 					{# Twitter/X #}
-					<a href="#" class="inline-flex items-center space-x-3 text-lg transition hover:text-white">
+					<a href="#" class="inline-flex items-center space-x-3 text-lg transition hover:text-orange-400">
 						<svg class="size-5 md:size-6 fill-orange-400" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M36.6526 3.8078H43.3995L28.6594 20.6548L46 43.5797H32.4225L21.7881 29.6759L9.61989 43.5797H2.86886L18.6349 25.56L2 3.8078H15.9222L25.5348 16.5165L36.6526 3.8078ZM34.2846 39.5414H38.0232L13.8908 7.63406H9.87892L34.2846 39.5414Z" fill="currentColor"/>
 						</svg>
@@ -178,7 +180,7 @@
 					</a>
 
 					{# Whatsapp #}
-					<a href="#" class="inline-flex items-center space-x-3 text-lg transition hover:text-white">
+					<a href="#" class="inline-flex items-center space-x-3 text-lg transition hover:text-orange-400">
 						<svg class="size-5 md:size-6 fill-orange-400" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M0 48L3.374 35.674C1.292 32.066 0.198 27.976 0.2 23.782C0.206 10.67 10.876 0 23.986 0C30.348 0.002 36.32 2.48 40.812 6.976C45.302 11.472 47.774 17.448 47.772 23.804C47.766 36.918 37.096 47.588 23.986 47.588C20.006 47.586 16.084 46.588 12.61 44.692L0 48ZM13.194 40.386C16.546 42.376 19.746 43.568 23.978 43.57C34.874 43.57 43.75 34.702 43.756 23.8C43.76 12.876 34.926 4.02 23.994 4.016C13.09 4.016 4.22 12.884 4.216 23.784C4.214 28.234 5.518 31.566 7.708 35.052L5.71 42.348L13.194 40.386ZM35.968 29.458C35.82 29.21 35.424 29.062 34.828 28.764C34.234 28.466 31.312 27.028 30.766 26.83C30.222 26.632 29.826 26.532 29.428 27.128C29.032 27.722 27.892 29.062 27.546 29.458C27.2 29.854 26.852 29.904 26.258 29.606C25.664 29.308 23.748 28.682 21.478 26.656C19.712 25.08 18.518 23.134 18.172 22.538C17.826 21.944 18.136 21.622 18.432 21.326C18.7 21.06 19.026 20.632 19.324 20.284C19.626 19.94 19.724 19.692 19.924 19.294C20.122 18.898 20.024 18.55 19.874 18.252C19.724 17.956 18.536 15.03 18.042 13.84C17.558 12.682 17.068 12.838 16.704 12.82L15.564 12.8C15.168 12.8 14.524 12.948 13.98 13.544C13.436 14.14 11.9 15.576 11.9 18.502C11.9 21.428 14.03 24.254 14.326 24.65C14.624 25.046 18.516 31.05 24.478 33.624C25.896 34.236 27.004 34.602 27.866 34.876C29.29 35.328 30.586 35.264 31.61 35.112C32.752 34.942 35.126 33.674 35.622 32.286C36.118 30.896 36.118 29.706 35.968 29.458Z" fill="currentColor"/>
 						</svg>
