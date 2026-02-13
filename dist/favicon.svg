@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000"><g clip-path="url(#SvgjsClipPath1149)"><rect width="1000" height="1000" fill="#000000"></rect><g transform="matrix(4.166666666666667,0,0,4.166666666666667,-5.684341886080802e-14,-5.684341886080802e-14)"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="240px" height="240px"><svg width="240px" height="240px" viewBox="0 0 240 240" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Frame</title>
+    <defs>
+        <path d="M0,0 L240,0 L240,240 L0,240 L0,0 Z" id="path-1"></path>
+    <clipPath id="SvgjsClipPath1149"><rect width="1000" height="1000" x="0" y="0" rx="500" ry="500"></rect></clipPath></defs>
+    <g id="Frame" stroke="none" fill="none" xlink:href="#path-1" fill-rule="evenodd">
+        <use fill="#000000" xlink:href="#path-1"></use>
+        <g id="FD" stroke-width="1" transform="translate(34, 42)" fill="#FF8905">
+            <polygon id="Path" fill-rule="nonzero" points="32.5621818 84.8 32.5621818 128 12.4021818 128 12.4021818 27.2 74.1781818 27.2 74.1781818 44.48 32.5621818 44.48 32.5621818 67.52 65.5381818 67.52 65.5381818 84.8"></polygon>
+            <path d="M163.629091,118.352 L146.925091,128 L85.1490909,128 L85.1490909,27.2 L146.925091,27.2 L163.629091,36.848 L163.629091,118.352 Z M105.309091,44.48 L105.309091,110.72 L143.469091,110.72 L143.469091,44.48 L105.309091,44.48 Z" id="Shape" fill-rule="nonzero"></path>
+        </g>
+        <g id="Group" stroke-width="1" transform="translate(21.5, 20.5)" stroke="#FF8905" stroke-linecap="square">
+            <line x1="0.5" y1="0.5" x2="0.5" y2="22.5" id="Line" stroke-width="2"></line>
+            <line x1="11.5" y1="-10.5" x2="11.5" y2="11.5" id="Line-Copy" stroke-width="2" transform="translate(11.5, 0.5) rotate(-90) translate(-11.5, -0.5)"></line>
+        </g>
+        <g id="Group-Copy-3" stroke-width="1" transform="translate(209, 30) scale(-1, 1) translate(-209, -30)translate(197.5, 18.5)" stroke="#FF8905" stroke-linecap="square">
+            <line x1="0.5" y1="0.5" x2="0.5" y2="22.5" id="Line" stroke-width="2"></line>
+            <line x1="11.5" y1="-10.5" x2="11.5" y2="11.5" id="Line-Copy" stroke-width="2" transform="translate(11.5, 0.5) rotate(-90) translate(-11.5, -0.5)"></line>
+        </g>
+        <g id="Group-Copy" stroke-width="1" transform="translate(33, 208) scale(1, -1) translate(-33, -208)translate(21.5, 196.5)" stroke="#FF8905" stroke-linecap="square">
+            <line x1="0.5" y1="0.5" x2="0.5" y2="22.5" id="Line" stroke-width="2"></line>
+            <line x1="11.5" y1="-10.5" x2="11.5" y2="11.5" id="Line-Copy" stroke-width="2" transform="translate(11.5, 0.5) rotate(-90) translate(-11.5, -0.5)"></line>
+        </g>
+        <g id="Group-Copy-2" stroke-width="1" transform="translate(209, 206) scale(-1, -1) translate(-209, -206)translate(197.5, 194.5)" stroke="#FF8905" stroke-linecap="square">
+            <line x1="0.5" y1="0.5" x2="0.5" y2="22.5" id="Line" stroke-width="2"></line>
+            <line x1="11.5" y1="-10.5" x2="11.5" y2="11.5" id="Line-Copy" stroke-width="2" transform="translate(11.5, 0.5) rotate(-90) translate(-11.5, -0.5)"></line>
+        </g>
+    </g>
+</svg></svg></g></g></svg>
