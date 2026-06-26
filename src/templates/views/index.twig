@@ -58,6 +58,63 @@
 			
 		</section>
 
+		{# Featured interview — full-width accent band, deliberately breaks the dark rhythm #}
+		<section id="interview" class="bg-orange-400 text-black px-6 md:px-16 py-16 md:py-24 relative">
+			<img src="./images/halftone.png" class="pointer-events-none bottom-0 absolute right-0 max-w-3xl md:max-w-5xl">
+			<img src="./images/halftone.png" class="pointer-events-none top-0 absolute left-0 max-w-3xl md:max-w-7xl rotate-180">
+
+			<div class="max-w-3xl mx-auto text-center z-10">
+
+				<h2 class="mb-6 font-heading tracking-tightest leading-12 md:leading-14 uppercase font-bold text-4xl md:text-6xl text-black">In His Own Words</h2>
+				<p class="text-lg md:text-2xl mb-6 text-black/80">From the front line to the boardroom</p>
+				<p class="md:text-lg mb-10 text-pretty text-black/90">Farard sat down with Dodge Woodall — host of one of the UK's biggest podcasts — to talk through the whole journey: 16 years in the British Army, the injuries that changed everything, and the decision to build health brands trusted by elite athletes and military personnel.</p>
+
+				{# Click-to-load YouTube facade — no iframe until the user opts in (privacy + performance) #}
+				<div
+					x-data="{ playing: false, hires: true }"
+					class="aspect-video relative overflow-hidden rounded-2xl shadow-xl mx-auto max-w-[760px] bg-black">
+
+					<template x-if="!playing">
+						<button
+							@click="playing = true"
+							type="button"
+							class="group absolute inset-0 w-full h-full cursor-pointer focus:outline-none focus-visible:ring-4 focus-visible:ring-black/40"
+							aria-label="Play Farard's interview with Dodge Woodall">
+							<img
+								:src="hires ? 'https://i.ytimg.com/vi/WgFQ7l0VZ7U/maxresdefault.jpg' : 'https://i.ytimg.com/vi/WgFQ7l0VZ7U/hqdefault.jpg'"
+								@load="if ($el.naturalWidth <= 120) hires = false"
+								@error="hires = false"
+								alt="Farard Darver interviewed on the Dodge Woodall podcast"
+								class="w-full h-full object-cover"
+								loading="lazy"
+								width="1280"
+								height="720">
+							<span class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/30 transition">
+								<span class="flex items-center justify-center size-20 md:size-24 rounded-full bg-orange-400 ring-4 ring-white/80 shadow-lg transition group-hover:scale-105">
+									<svg class="size-9 md:size-10 ml-1 fill-black" viewBox="0 0 24 24" aria-hidden="true">
+										<path d="M8 5v14l11-7L8 5Z" />
+									</svg>
+								</span>
+							</span>
+						</button>
+					</template>
+
+					<template x-if="playing">
+						<iframe
+							class="absolute inset-0 w-full h-full"
+							src="https://www.youtube-nocookie.com/embed/WgFQ7l0VZ7U?autoplay=1"
+							title="Farard Darver — Dodge Woodall interview"
+							allow="autoplay; encrypted-media; picture-in-picture"
+							allowfullscreen></iframe>
+					</template>
+				</div>
+
+				<p class="mx-auto max-w-[760px] mt-4">As featured on the Dodge Woodall podcast — top 0.5% of podcasts globally, 100M+ views.</p>
+
+			</div>
+
+		</section>
+
 		<section id="founder" class="md:h-screen bg-black border-t border-orange-400/20 pl-16 md:pl-32 pr-8 py-16 md:py-auto">
 			<div class="max-w-6xl mx-auto h-full flex flex-col md:flex-row-reverse gap-6 items-center justify-center w-full">
 				

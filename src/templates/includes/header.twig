@@ -1,4 +1,15 @@
-<header class="z-10 fixed top-0 inset-x-0 bg-black/50 flex justify-end">
+<header
+	class="z-10 fixed top-0 inset-x-0 bg-black/50 flex justify-end"
+	x-data="{ topAccent: false, lineAccent: false, iconAccent: false }"
+	x-init="$nextTick(() => {
+		const band = document.getElementById('interview');
+		if (!band) return;
+		const watch = (margin, set) =>
+			new IntersectionObserver(([e]) => set(e.isIntersecting), { rootMargin: margin }).observe(band);
+		watch('0px 0px -85% 0px', v => topAccent = v);   // orange behind top text strip
+		watch('0px', v => lineAccent = v);               // orange anywhere in view (full-height line)
+		watch('-78% 0px 0px 0px', v => iconAccent = v);  // orange behind bottom icon strip
+	})">
 	<nav>
 		<ul class="flex gap-4 mr-8">
 			<li><a class="py-3 block text-white hover:text-orange-400" href="#about">About</a></li>
@@ -7,11 +18,11 @@
 			<li><a class="py-3 block text-white hover:text-orange-400" href="#contact">Contact</a></li>
 		</ul>
 	</nav>
-	<div class="fixed left-4 md:left-10 top-10 bottom-0 w-px bg-orange-400" aria-hidden="true"></div>
+	<div class="fixed left-4 md:left-10 top-10 bottom-0 w-px transition-colors duration-200" :class="lineAccent ? 'bg-black' : 'bg-orange-400'" aria-hidden="true"></div>
 	<div class="fixed rotate-90 -left-6 md:left-0 top-20">
-		<p class="text-orange-400 uppercase font-heading">Farard.com</p>
+		<p class="uppercase font-heading transition-colors duration-200" :class="topAccent ? 'text-black' : 'text-orange-400'">Farard.com</p>
 	</div>
-	<div class="fixed left-6 md:left-12 bottom-10 text-orange-400 transition flex flex-col space-y-3">
+	<div class="fixed left-6 md:left-12 bottom-10 transition-colors duration-200 flex flex-col space-y-3" :class="iconAccent ? 'text-black' : 'text-orange-400'">
 		
 		{# Facebook #}
 		<a target="_blank" href="https://www.facebook.com/profile.php?id=61587290586204" class="block transition hover:text-white">
@@ -46,7 +57,7 @@
 		{# TikTok #}
 		<a target="_blank" href="https://www.tiktok.com/@farard_darver" class="block transition hover:text-white">
 			<svg class="size-5 md:size-6 fill-orange-400" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<path d="M34.1451 0H26.0556V32.6956C26.0556 36.5913 22.9444 39.7913 19.0725 39.7913C15.2007 39.7913 12.0894 36.5913 12.0894 32.6956C12.0894 28.8696 15.1315 25.7391 18.8651 25.6V17.3913C10.6374 17.5304 4 24.2783 4 32.6956C4 41.1827 10.7757 48 19.1417 48C27.5075 48 34.2833 41.1131 34.2833 32.6956V15.9304C37.3255 18.1565 41.059 19.4783 45 19.5479V11.3391C38.9157 11.1304 34.1451 6.12173 34.1451 0Z" fill="fillCurrent"/>
+				<path d="M34.1451 0H26.0556V32.6956C26.0556 36.5913 22.9444 39.7913 19.0725 39.7913C15.2007 39.7913 12.0894 36.5913 12.0894 32.6956C12.0894 28.8696 15.1315 25.7391 18.8651 25.6V17.3913C10.6374 17.5304 4 24.2783 4 32.6956C4 41.1827 10.7757 48 19.1417 48C27.5075 48 34.2833 41.1131 34.2833 32.6956V15.9304C37.3255 18.1565 41.059 19.4783 45 19.5479V11.3391C38.9157 11.1304 34.1451 6.12173 34.1451 0Z" fill="currentColor"/>
 			</svg>
 		</a>
 
